@@ -3,8 +3,10 @@
 ## Introduction
 
 In this assignment, you will be creating a database for a new application to help manage data about students and instructors.
+
 The app will allow instructors to help students better and faster by offering a quick
 insight into data like assignment completion and effectiveness of assistance requests.
+
 You will be responsible for writing all of the queries to get data from the database. That means writing a lot of `SELECT` statements, without having to worry about any JavaScript, HTML, or CSS.
 
 ## The Entities
