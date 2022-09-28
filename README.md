@@ -63,12 +63,12 @@ A `instructor` will have the following attributes:
 
 An `assistance_request` will have the following attributes:
 
-`id`: A unique identifier
-`assignment_id`: The id of the assignment the request was made from
-`student_id`: The id of the student making the request
-`instructor_id`: The id of the instructor responding to the request
-`created_at`: The timestamp when the request was made
-`started_at`: The timestamp when the assistance started
-`completed_at`: The timestamp when the assistance was completed
-`student_feedback`: Feedback about the student given by the instructor
-`instructor_feedback`: Feedback about the instructor given by the student
+- `id`: A unique identifier
+- `assignment_id`: The id of the assignment the request was made from
+- `student_id`: The id of the student making the request
+- `instructor_id`: The id of the instructor responding to the request
+- `created_at`: The timestamp when the request was made
+- `started_at`: The timestamp when the assistance started
+- `completed_at`: The timestamp when the assistance was completed
+- `student_feedback`: Feedback about the student given by the instructor
+- `instructor_feedback`: Feedback about the instructor given by the student
