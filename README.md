@@ -47,11 +47,11 @@ An `assignment` will have the following attributes:
 
 An `assignment_submission` will have the following attributes:
 
-`id`: A unique identifier
-`assignment_id`: The id of the assignment
-`student_id`: The id of the student
-`duration`: The time it took the student to complete the assignment
-`submission_date`: The date is was submitted
+- `id`: A unique identifier
+- `assignment_id`: The id of the assignment
+- `student_id`: The id of the student
+- `duration`: The time it took the student to complete the assignment
+- `submission_date`: The date is was submitted
 
 A `instructor` will have the following attributes:
 
