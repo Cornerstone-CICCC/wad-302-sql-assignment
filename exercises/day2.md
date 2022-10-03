@@ -20,12 +20,12 @@
 
 5. Get the total amount of time that a student has spent on all assignments.
 
-   - Show only `student_name`, `total_time` columns.
+   - Show only `total_time` column.
    - This should work for any student but use `Ibrahim Schimmel` for now.
 
 6. Get the total amount of time that all students from a specific class have spent on all assignments.
 
-   - Show only `class_name`, `total_time` columns.
+   - Show only `total_time` column.
    - This should work for any class but use `FEB12` for now.
    - You can write as many JOIN statements as you need in a single query.
 
@@ -67,7 +67,7 @@ GROUP BY students.name;
 
 10. Create a new folder called `queries_group-by`
 
-11. Get the total number of assignments for each day of bootcamp.
+11. Get the total number of assignments for each day of class.
 
     - Show only `day`, `total_assignments` columns.
     - Order them by `day`.
