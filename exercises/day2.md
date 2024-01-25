@@ -1,4 +1,4 @@
-# Exercise - Week Assignment - Day 2
+# Exercise - SQL Assignment - Day 2
 
 ## Activities
 

@@ -1,5 +1,5 @@
 {
-  "name": "week4-assignment",
+  "name": "SQL Assignment",
   "version": "1.0.0",
   "description": "## Introduction",
   "main": "testHelper.js",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adlascio-instructor/node-w4-assignment.git"
+    "url": "git+https://github.com/Cornerstone-CICCC/wad-302-sql-assignment.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/adlascio-instructor/node-w4-assignment/issues"
+    "url": "https://github.com/Cornerstone-CICCC/wad-302-sql-assignment/issues"
   },
-  "homepage": "https://github.com/adlascio-instructor/node-w4-assignment#readme",
+  "homepage": "https://github.com/Cornerstone-CICCC/wad-302-sql-assignment#readme",
   "dependencies": {
     "dotenv": "^16.0.3",
     "jest": "^29.1.2",
