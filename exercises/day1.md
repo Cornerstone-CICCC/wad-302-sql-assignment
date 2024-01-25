@@ -61,7 +61,7 @@ Please note that the exercise assumes that your `psql` is already up and running
 
 5. Get all students without a Github username.
 
-   - Create a file called `01_get_students_without_github.sql` in the `queries` folder.
+   - Use the file `01_get_students_without_github.sql` in the `queries` folder to create the query.
    - Show only `id`, `name`, `email` and `class_id` columns.
    - Order them by `class_id`.
    - Execute the file and check the results.
@@ -70,7 +70,7 @@ Please note that the exercise assumes that your `psql` is already up and running
 
 6. Get all students in a specific class.
 
-   - Create a file called `02_get_students_in_class.sql` in the `queries` folder.
+   - Use the file `02_get_students_in_class.sql` in the `queries` folder to create the query.
    - Show only `id` and `name` columns.
    - Order them by their name in alphabetical order.
    - Since this query needs to work with any specific class, just use any number for the class_id.

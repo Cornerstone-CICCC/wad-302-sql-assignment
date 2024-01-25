@@ -2,7 +2,7 @@
 
 ## Activities
 
-> Create one file inside `queries_joins` folder for each activity.
+> Use the files inside `queries_joins` folder for each activity.
 
 1. Create a query to get all students and combine with their class name. (JOIN)
 
@@ -65,7 +65,7 @@ GROUP BY students.name;
 
 > The `HAVING` clause is like `WHERE` but works on aggregated data. Our `WHERE` clause works on normal data students.end_date and our `HAVING` clause works on the aggregated data `count(assignment_submissions.*)`.
 
-10. Create a new folder called `queries_group-by`
+10. Use the files inside of the folder `queries_group-by` to do the next queries.
 
 11. Get the total number of assignments for each day of class.
 
