@@ -1,12 +1,55 @@
+# Exercise - SQL Assignment - Day 1
+
+# Instructions
+
+This assignment has tests to verify if your answers are right.
+It's necessary to install the libraries to use the tests.
+
+To do that, install all dependencies using the command below:
+
+```bash
+npm install
+```
+
+Before running the test you need to set up your environment variable (.env).
+
+Create a file .env in the root of the project and add the follow variables:
+
+```json
+    DB_USER= 'your psql user'
+    DB_HOST= 'localhost'
+    DB_DATABASE= 'name of your database'
+    DB_PASSWORD= ''
+    DB_PORT=5432
+```
+
+To run all the tests you need to use the script test:
+
+```bash
+npm run test
+```
+
+If you want to run a specific test use the follow command:
+
+```bash
+npm test <file>
+```
+
+Follow the steps to do the assignment.
+
+Please note that the exercise assumes that your `psql` is already up and running.
+
 1. Create a new database called `week_assignment` or whatever you want to call our app using `psql`.
 
 2. Create the tables for our `students` and `classes` entities.
 
    - Create a folder called `migrations` within the `week_assignment` folder.
    - Inside `migrations`, create a file called `01_students_classes.sql`.
-   - Write the SQL queries to create the tables for the `students` and `classes` entities. Use the ERD to help.
+   - Write the SQL queries to create the tables for the `students` and `classes` entities. Use the ERD to help (README.MD in the root).
    - From your psql session, type `\i migrations/students_classes.sql` to execute the file.
    - Now enter `\dt` into your psql session to make sure the two tables have been created.
+
+   Obs.: use the command `\cd + path of the project` to change the directory and then you can use the `\i` to execute the file.
 
 3. Import the students' and classes' data from the `seeds` folder into the database.
 
@@ -18,7 +61,7 @@
 
 5. Get all students without a Github username.
 
-   - Create a file called `01_get_students_without_github.sql` in the `queries` folder.
+   - Use the file `01_get_students_without_github.sql` in the `queries` folder to create the query.
    - Show only `id`, `name`, `email` and `class_id` columns.
    - Order them by `class_id`.
    - Execute the file and check the results.
@@ -27,7 +70,7 @@
 
 6. Get all students in a specific class.
 
-   - Create a file called `02_get_students_in_class.sql` in the `queries` folder.
+   - Use the file `02_get_students_in_class.sql` in the `queries` folder to create the query.
    - Show only `id` and `name` columns.
    - Order them by their name in alphabetical order.
    - Since this query needs to work with any specific class, just use any number for the class_id.

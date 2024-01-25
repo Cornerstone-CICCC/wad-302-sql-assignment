@@ -1,4 +1,4 @@
-# Week 4 Assignment
+# Structured Query Language (SQL) Assignment
 
 ## Introduction
 
