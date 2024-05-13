@@ -1,15 +1,15 @@
-const { queryDb } = require("../testHelper");
+const { queryDb } = require("../../testHelper");
 
-describe("queries_group-by/06_get_enrolled_students_avg_time_completion_less_estimated.sql", () => {
+describe("Queries-group-by 06: Get enrolled students avg time completion less estimated", () => {
   test("4 rows", async () => {
     const res = await queryDb(
-      "queries_group-by/06_get_enrolled_students_avg_time_completion_less_estimated.sql"
+      "queries-group-by/queries-group-by06.sql"
     );
     expect(res.rowCount).toBe(4);
   });
   test("3 columns with correct names", async () => {
     const res = await queryDb(
-      "queries_group-by/06_get_enrolled_students_avg_time_completion_less_estimated.sql"
+      "queries-group-by/queries-group-by06.sql"
     );
     const columns = res.fields.map((field) => field.name);
     expect(columns).toEqual([
@@ -20,7 +20,7 @@ describe("queries_group-by/06_get_enrolled_students_avg_time_completion_less_est
   });
   test("ordered by average_time", async () => {
     const res = await queryDb(
-      "queries_group-by/06_get_enrolled_students_avg_time_completion_less_estimated.sql"
+      "queries-group-by/queries-group-by06.sql"
     );
     const columns = res.rows.map((row) => row.average_time);
     const sorted = [...columns].sort((a, b) => {

@@ -1,22 +1,22 @@
-const { queryDb } = require("../testHelper");
+const { queryDb } = require("../../testHelper");
 
-describe("queries_group-by/02_get_total_assignments_per_day_greater_10.sql", () => {
+describe("Queries-group-by 02: Get total assignments per day greater than 10", () => {
   test("15 rows", async () => {
     const res = await queryDb(
-      "queries_group-by/02_get_total_assignments_per_day_greater_10.sql"
+      "queries-group-by/queries-group-by02.sql"
     );
     expect(res.rowCount).toBe(15);
   });
   test("2 columns with correct names", async () => {
     const res = await queryDb(
-      "queries_group-by/02_get_total_assignments_per_day_greater_10.sql"
+      "queries-group-by/queries-group-by02.sql"
     );
     const columns = res.fields.map((field) => field.name);
     expect(columns).toEqual(["day", "total_assignments"]);
   });
   test("ordered by day", async () => {
     const res = await queryDb(
-      "queries_group-by/02_get_total_assignments_per_day_greater_10.sql"
+      "queries-group-by/queries-group-by02.sql"
     );
     const columns = res.rows.map((row) => row.day);
     const sorted = [...columns].sort((a, b) => {

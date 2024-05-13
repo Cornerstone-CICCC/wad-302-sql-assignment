@@ -65,38 +65,47 @@ GROUP BY students.name;
 
 > The `HAVING` clause is like `WHERE` but works on aggregated data. Our `WHERE` clause works on normal data students.end_date and our `HAVING` clause works on the aggregated data `count(assignment_submissions.*)`.
 
-10. Use the files inside of the folder `queries_group-by` to do the next queries.
+## Queries-group-by
 
-11. Get the total number of assignments for each day of class.
+Use the files inside of the folder `queries_group-by` to do the next queries.
 
-    - Show only `day`, `total_assignments` columns.
-    - Order them by `day`.
-    - This query only requires the `assignments` table.
+**Queries-group-by 01:** Get the total number of assignments for each day of class.
 
-12. The same query as before, but only return rows where total assignments is greater than or equal to `10`.
+- Use the file `queries-group-by01.sql` in the `queries-group-by` folder to create the query.
+- Show only `day`, `total_assignments` columns.
+- Order them by `day`.
+- This query only requires the `assignments` table.
 
-13. Get all classs with 18 or more students.
+**Queries-group-by 02:** The same query as before, but only return rows where total assignments is greater than or equal to `10`.
 
-    - Show only `class_name`, `total_students` columns.
-    - Order them by `total_students` from smallest to greatest.
+- Use the file `queries-group-by02.sql` in the `queries-group-by` folder to create the query.
 
-14. Get the total number of assignment submissions for each class.
+**Queries-group-by 03:** Get all class with 18 or more students.
 
-    - Show only `class_name`, `total_submissions` columns.
-    - Order them by `total_submissions` from greatest to least submissions.
+- Use the file `queries-group-by03.sql` in the `queries-group-by` folder to create the query.
+- Show only `class_name`, `total_students` columns.
+- Order them by `total_students` from smallest to greatest.
 
-15. Get currently enrolled students' average assignment completion time.
+**Queries-group-by 04:** Get the total number of assignment submissions for each class.
 
-    - Show only `student_name`, `average_time` columns.
-    - Order them by `average_time` from greatest to least duration.
-    - A student will have a null `end_date` if they are currently enrolled
+- Use the file `queries-group-by04.sql` in the `queries-group-by` folder to create the query.
+- Show only `class_name`, `total_submissions` columns.
+- Order them by `total_submissions` from greatest to least submissions.
 
-16. Get the students who's average time it takes to complete an assignment is less than the average estimated time it takes to complete an assignment.
+**Queries-group-by 05:** Get currently enrolled students' average assignment completion time.
 
-    - Show only `student_name`, `average_time`, `average_estimated_time` columns.
-    - Order them by `average_time` from least to greatest duration.
-    - Only get enrolled students.
-    - This will require data from `students`, `assignment_submissions`, and `assignments`.
+- Use the file `queries-group-by05.sql` in the `queries-group-by` folder to create the query.
+- Show only `student_name`, `average_time` columns.
+- Order them by `average_time` from greatest to least duration.
+- A student will have a null `end_date` if they are currently enrolled
+
+**Queries-group-by 06:** Get the students who's average time it takes to complete an assignment is less than the average estimated time it takes to complete an assignment.
+
+- Use the file `queries-group-by06.sql` in the `queries-group-by` folder to create the query.
+- Show only `student_name`, `average_time`, `average_estimated_time` columns.
+- Order them by `average_time` from least to greatest duration.
+- Only get enrolled students.
+- This will require data from `students`, `assignment_submissions`, and `assignments`.
 
 17. (Walkthrough) Lets say we want to get the total number of incomplete assignments for a specific student. We could calculate this by taking the total number of submissions for a student and subtracting that from the total number of assignments that exist.
 
