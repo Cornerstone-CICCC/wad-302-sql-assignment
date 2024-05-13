@@ -1,15 +1,15 @@
-const { queryDb } = require("../testHelper");
+const { queryDb } = require("../../testHelper");
 
-describe("queries_in/10_get_total_assistance_requests_assignment.sql", () => {
+describe("Queries-in 10: Get total assistance requests assignment", () => {
   test("424 rows", async () => {
     const res = await queryDb(
-      "queries_in/10_get_total_assistance_requests_assignment.sql"
+      "queries-in/queries-in10.sql"
     );
     expect(res.rowCount).toBe(424);
   });
   test("5 columns with correct names", async () => {
     const res = await queryDb(
-      "queries_in/10_get_total_assistance_requests_assignment.sql"
+      "queries-in/queries-in10.sql"
     );
     const columns = res.fields.map((field) => field.name);
     expect(columns).toEqual([
@@ -22,7 +22,7 @@ describe("queries_in/10_get_total_assistance_requests_assignment.sql", () => {
   });
   test("ordered by total_assistances", async () => {
     const res = await queryDb(
-      "queries_in/10_get_total_assistance_requests_assignment.sql"
+      "queries-in/queries-in10.sql"
     );
     const columns = res.rows.map((row) => row.total_assistances);
     const sorted = [...columns].sort((a, b) => {
