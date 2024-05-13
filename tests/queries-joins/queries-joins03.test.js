@@ -1,12 +1,12 @@
-const { queryDb } = require("../testHelper");
+const { queryDb } = require("../../testHelper");
 
-describe("queries_joins/03_get_rollover_students.sql", () => {
+describe("Queries-joins 03: Get rollover students.sql", () => {
   test("8 rows", async () => {
-    const res = await queryDb("queries_joins/03_get_rollover_students.sql");
+    const res = await queryDb("queries-joins/queries-joins03.sql");
     expect(res.rowCount).toBe(8);
   });
   test("4 columns with correct names", async () => {
-    const res = await queryDb("queries_joins/03_get_rollover_students.sql");
+    const res = await queryDb("queries-joins/queries-joins03.sql");
     const columns = res.fields.map((field) => field.name);
     expect(columns).toEqual([
       "student_name",
@@ -16,7 +16,7 @@ describe("queries_joins/03_get_rollover_students.sql", () => {
     ]);
   });
   test("ordered by class_start_date", async () => {
-    const res = await queryDb("queries_joins/03_get_rollover_students.sql");
+    const res = await queryDb("queries-joins/queries-joins03.sql");
     const columns = res.rows.map((row) => row.class_start_date);
     const sorted = [...columns].sort((a, b) => {
       if (a === null) return 1;
