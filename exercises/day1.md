@@ -41,6 +41,12 @@ If you want to run a specific test use the follow command:
 npm test <file>
 ```
 
+If you want to run the all the tests inside of a specific test folder:
+
+```bash
+npm test:<folderName>
+```
+
 ## Setup
 
 Follow the steps to do the assignment.

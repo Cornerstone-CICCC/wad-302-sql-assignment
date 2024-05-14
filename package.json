@@ -7,7 +7,11 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:queries": "jest --testPathPattern=/tests/queries/",
+    "test:queries-in": "jest --testPathPattern=/tests/queries-in",
+    "test:queries-joins": "jest --testPathPattern=/tests/queries-joins",
+    "test:queries-group-by": "jest --testPathPattern=/tests/queries-group-by"
   },
   "repository": {
     "type": "git",
