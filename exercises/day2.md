@@ -119,7 +119,9 @@ Use the files inside of the folder `queries_group-by` to do the next queries.
 - Only get enrolled students.
 - This will require data from `students`, `assignment_submissions`, and `assignments`.
 
-17. (Walkthrough) Lets say we want to get the total number of incomplete assignments for a specific student. We could calculate this by taking the total number of submissions for a student and subtracting that from the total number of assignments that exist.
+## Walkthrough:
+
+Lets say we want to get the total number of incomplete assignments for a specific student. We could calculate this by taking the total number of submissions for a student and subtracting that from the total number of assignments that exist.
 
 ```sql
 SELECT count(assignments) - count(assignment_submissions)
@@ -299,83 +301,101 @@ WHERE id NOT IN
 
 This will return the name of all assignments not completed by 'Ibrahim Schimmel'.
 
-18. A `student` can create many `assistance_requests` and an `instructor` can respond to many `assistance_requests`. Create the ERD for these two entities. You can follow the attributes from the `README` file.
+## Setup for Queries-in:
 
-19. Write the CREATE TABLE statements for the `assistance_requests` and `instructors` tables.
+**Step 1:** A `student` can create many `assistance_requests` and an `instructor` can respond to many `assistance_requests`. Create the ERD for these two entities. You can follow the attributes from the `README` file.
+
+**Step 2:** Write the CREATE TABLE statements for the `assistance_requests` and `instructors` tables.
 
 - Inside `migrations`, create a file called `instructors_assistance_requests.sql`.
 - Write the CREATE TABLE statements for the `assistance_requests` and `instructors` tables.
 
-20. From psql, type `\i migrations/instructors_assistance_requests.sql` to run the migration.
+**Step 3:** From psql, type `\i migrations/instructors_assistance_requests.sql` to run the migration.
 
-21. Now enter `\dt` to see the new tables.
+**Step 4:** Now enter `\dt` to see the new tables.
 
-22. Import `instructors_seeds.sql` and `assistance_requests_seeds.sql` to seed the database.
+**Step 5:** Import `instructors_seeds.sql` and `assistance_requests_seeds.sql` to seed the database.
 
-23. Commit and push your changes.
+**Step 6:** Commit and push your changes.
 
-24. Get the total number of assistance requests for a instructor.
+**Queries-in 01:** Get the total number of assistance requests for a instructor.
 
+- Use the file `queries-in01.sql` in the `queries-in` folder to create the query.
 - Select the instructor's name and the total assistance requests.
 - Since this query needs to work with any specific instructor name, use `'Waylon Boehm'` for the instructor name.
 
-25. Get the total number of assistance requests for a student.
+**Queries-in 02:** Get the total number of assistance requests for a student.
 
+- Use the file `queries-in02.sql` in the `queries-in` folder to create the query.
 - Select the student's name and the total assistance requests.
 - Since this query needs to work with any specific student name, use `'Elliot Dickinson'` for the student name.
 
-26. Get important data about each assistance request.
+**Queries-in 03:** Get important data about each assistance request.
 
+- Use the file `queries-in03.sql` in the `queries-in` folder to create the query.
 - Select the instructor's name, the student's name, assignment's name and the duration of the assistance request.
 - Subtract `completed_at` by `started_at` to find the duration.
 - Order by duration of the request.
 
-27. Get the average time of an assistance request.
+**Queries-in 04:** Get the average time of an assistance request.
 
+- Use the file `queries-in04.sql` in the `queries-in` folder to create the query.
 - Select just a single row here and name it `average_assistance_request_duration`.
 - In Postgres, we can subtract two timestamps to get the duration of the request.
 
-28. Get the average duration of assistance requests for each class.
+**Queries-in 05:** Get the average duration of assistance requests for each class.
 
+- Use the file `queries-in05.sql` in the `queries-in` folder to create the query.
 - Select the class name and the average duration of the assistance requests.
 - Order the results from shortest to longest duration.
 
-29. Get the class with the longest average duration of assistance requests.
+**Queries-in 06:** Get the class with the longest average duration of assistance requests.
 
+- Use the file `queries-in06.sql` in the `queries-in` folder to create the query.
 - Same requirements as the previous query, but only return the single row with the longest average.
 
-30. Calculate the average time it takes to start an assistance request.
+**Queries-in 07:** Calculate the average time it takes to start an assistance request.
 
+- Use the file `queries-in07.sql` in the `queries-in` folder to create the query.
 - Return a single column here.
 
-31. Get the total duration of all assistance requests for each class.
+**Queries-in 08:** Get the total duration of all assistance requests for each class.
 
+- Use the file `queries-in08.sql` in the `queries-in` folder to create the query.
 - Select the class name and the total duration of the assistance requests.
 - Order the results from shortest to longest duration.
 - Look at the ERD to see how to join the tables.
 
-32. Calculate the average total duration of assistance requests for each class.
+**Queries-in 09:** Calculate the average total duration of assistance requests for each class.
 
+- Use the file `queries-in09.sql` in the `queries-in` folder to create the query.
 - Use the previous query as a sub query.
 - Return a single row `average_total_duration`.
 
-33. List each assigment with the total number of assistance requests with it.
+**Queries-in 10:** List each assigment with the total number of assistance requests with it.
 
+- Use the file `queries-in10.sql` in the `queries-in` folder to create the query.
 - Select the assignment's id, day, chapter, name and the total assistances.
 - Order by total assistances in order of most to least.
 
-34. Get each day with the total number of assignments and the total duration of assignments.
+**Queries-in 11:** Get each day with the total number of assignments and the total duration of assignments.
 
+- Use the file `queries-in11.sql` in the `queries-in` folder to create the query.
 - Select the day, total assignments and total duration.
 - Order results by the day.
 
-35. Get the name of all instructors that performed an assistance request during a class.
+**Queries-in 12:** Get the name of all instructors that performed an assistance request during a class.
 
-    - Select the instructor's name and class name.
-    - Don't repeat the same instructor's name for the same class.
-    - Order by the instructor's name.
-    - This query needs to select data for a class with a specific name, use `'JUL02'` for the class' name here.
+- Use the file `queries-in12.sql` in the `queries-in` folder to create the query.
+- Select the instructor's name and class name.
+- Don't repeat the same instructor's name for the same class.
+- Order by the instructor's name.
+- This query needs to select data for a class with a specific name, use `'JUL02'` for the class' name here.
 
-36. Perform the same query as before, but include the number of assistances as well.
+**Queries-in 13:** Perform the same query as before, but include the number of assistances as well.
 
-37. Commit and push your changes.
+- Use the file `queries-in13.sql` in the `queries-in` folder to create the query.
+
+You finished the assignment! Congrats! 🎉
+
+Commit and push your changes. 🫶🏻
