@@ -1,6 +1,6 @@
 # Results
 
-## 01_get_students_without_github.sql
+## Queries01.sql: Get students without github
 
 ```text
  id  |       name        |             email              | class_id
@@ -28,7 +28,7 @@
 (20 rows)
 ```
 
-## 02_get_students_in_class.sql
+## Queries02.sql: Get students in class
 
 ```text
 using class_id = 1
@@ -56,7 +56,7 @@ using class_id = 1
 (18 rows)
 ```
 
-## 03_total_students_first_3_classes.sql
+## Queries03.sql: Total students first 3 classes
 
 ```text
   total_students
@@ -65,7 +65,7 @@ using class_id = 1
 (1 row)
 ```
 
-## 04_students_without_email_or_phone.sql
+## Queries04.sql: Students without email or phone
 
 ```text
    student_name
@@ -90,7 +90,7 @@ using class_id = 1
 (17 rows)
 ```
 
-## 05_students_without_gmail_and_phone.sql
+## Queries05.sql: Students without gmail and phone
 
 ```text
       name       | id  |           email           | class_id
@@ -101,7 +101,7 @@ using class_id = 1
 (3 rows)
 ```
 
-## 06_get_students_enrolled.sql
+## Queries06.sql : Get students enrolled
 
 ```text
         name         | id  | class_id
@@ -151,7 +151,7 @@ using class_id = 1
 (42 rows)
 ```
 
-## 07_get_graduates_without_github.sql
+## Queries07.sql: Get graduates without github
 
 ```text
        name        |             email             |    phone
