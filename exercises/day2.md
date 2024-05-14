@@ -1,37 +1,44 @@
 # Exercise - SQL Assignment - Day 2
 
-## Activities
+## Queries-joins
 
-> Use the files inside `queries_joins` folder for each activity.
+**Queries-joins 01:** Create a query to get all students and combine with their class name. (JOIN)
 
-1. Create a query to get all students and combine with their class name. (JOIN)
+- Use the file `queries-joins01.sql` in the `queries-joins` folder to create the query.
+- Show only `student_name`, `email` and `class_name` columns.
 
-   - Show only `student_name`, `email` and `class_name` columns.
+**Queries-joins 02:** Create the same query but getting only students that are enrolled. (INNER JOIN)
 
-2. Create the same query but getting only students that are enrolled. (INNER JOIN)
+- Use the file `queries-joins02.sql` in the `queries-joins` folder to create the query.
 
-3. Execute the same query but replace the `INNER JOIN` with `LEFT JOIN`, `RIGHT JOIN` and `FULL JOIN`. Test all the cases and try to identify what is the difference between them.
+Obs: Execute the same query but replace the `INNER JOIN` with `LEFT JOIN`, `RIGHT JOIN` and `FULL JOIN`. Test all the cases and try to identify what is the difference between them.
 
-4. Create a query to get all rollover students (students that have a start_date different than the class start_date).
+**Queries-joins 03:** Create a query to get all rollover students (students that have a start_date different than the class start_date).
 
-   - Show only `student_name`, `class_name`, student's `start_date` and class' `start_date` columns.
-   - Change the name of the columns to `student_start_date` and `class_start_date`.
-   - Order them by `class_start_date`.
+- Use the file `queries-joins03.sql` in the `queries-joins` folder to create the query.
+- Show only `student_name`, `class_name`, student's `start_date` and class' `start_date` columns.
+- Change the name of the columns to `student_start_date` and `class_start_date`.
+- Order them by `class_start_date`.
 
-5. Get the total amount of time that a student has spent on all assignments.
+**Queries-joins 04:** Get the total amount of time that a student has
+spent on all assignments.
 
-   - Show only `total_time` column.
-   - This should work for any student but use `Ibrahim Schimmel` for now.
+- Use the file `queries-joins04.sql` in the `queries-joins` folder to create the query.
+- Show only `total_time` column.
+- This should work for any student but use `Ibrahim Schimmel` for now.
 
-6. Get the total amount of time that all students from a specific class have spent on all assignments.
+**Queries-joins 05:** Get the total amount of time that all students from a specific class have spent on all assignments.
 
-   - Show only `total_time` column.
-   - This should work for any class but use `FEB12` for now.
-   - You can write as many JOIN statements as you need in a single query.
+- Use the file `queries-joins05.sql` in the `queries-joins` folder to create the query.
+- Show only `total_time` column.
+- This should work for any class but use `FEB12` for now.
+- You can write as many JOIN statements as you need in a single query.
 
-7. Commit and push your changes to GitHub.
+**Commit and push your changes to GitHub.**
 
-8. If we want to calculate the total number of `assignment_submissions` for all students, the count aggregate function is perfect.
+**Queries-joins 06:** If we want to calculate the total number of `assignment_submissions` for all students, the count aggregate function is perfect.
+
+- Use the file `queries-joins06.sql` in the `queries-joins` folder to create the query.
 
 ```sql
 SELECT count(assignment_submissions.*) as total_submissions
@@ -61,7 +68,9 @@ GROUP BY students.name;
 
 > Run this query and after that, alter the query slightly to only return currently enrolled students. A currently enrolled student has a null end_date.
 
-9. Now that we know how to get the total submissions for currently enrolled students, let's refine the query a bit more. Let's only return currently enrolled students who's total submissions are less than 100.
+**Queries-joins 07:** Now that we know how to get the total submissions for currently enrolled students, let's refine the query a bit more. Let's only return currently enrolled students who's total submissions are less than 100.
+
+- Use the file `queries-joins07.sql` in the `queries-joins` folder to create the query.
 
 > The `HAVING` clause is like `WHERE` but works on aggregated data. Our `WHERE` clause works on normal data students.end_date and our `HAVING` clause works on the aggregated data `count(assignment_submissions.*)`.
 
