@@ -13,7 +13,13 @@ npm install
 
 Before running the test you need to set up your environment variable (.env).
 
-Create a file .env in the root of the project and add the follow variables:
+Copy the sample environment variables file to create your own `.env` file:
+
+```bash
+$ cp .env.example .env
+```
+
+Open your .env file and update the variables:
 
 ```json
     DB_USER= 'your psql user'
@@ -34,6 +40,8 @@ If you want to run a specific test use the follow command:
 ```bash
 npm test <file>
 ```
+
+## Setup
 
 Follow the steps to do the assignment.
 
@@ -59,49 +67,59 @@ Please note that the exercise assumes that your `psql` is already up and running
 
 4. Commit all your changes and push them to GitHub.
 
-5. Get all students without a Github username.
+## Queries
 
-   - Use the file `01_get_students_without_github.sql` in the `queries` folder to create the query.
-   - Show only `id`, `name`, `email` and `class_id` columns.
-   - Order them by `class_id`.
-   - Execute the file and check the results.
+**Queries 01**: Get all students without a Github username.
 
-   > Remember to create a new file for each query.
+- Use the file `queries01.sql` in the `queries` folder to create the query.
+- Show only `id`, `name`, `email` and `class_id` columns.
+- Order them by `class_id`.
+- Execute the file and check the results.
 
-6. Get all students in a specific class.
+**Queries 02**: Get all students in a specific class.
 
-   - Use the file `02_get_students_in_class.sql` in the `queries` folder to create the query.
-   - Show only `id` and `name` columns.
-   - Order them by their name in alphabetical order.
-   - Since this query needs to work with any specific class, just use any number for the class_id.
-   - Execute the file and check the results.
+- Use the file `queries02.sql` in the `queries` folder to create the query.
+- Show only `id` and `name` columns.
+- Order them by their name in alphabetical order.
+- Since this query needs to work with any specific class, just use any number for the class_id.
+- Execute the file and check the results.
 
-7. Select the total number of students who were in the first 3 classes.
+**Queries 03**: Select the total number of students who were in the first 3 classes.
 
-8. Get all of the students that don't have an email or phone number.
+- Use the file `queries03.sql` in the `queries` folder to create the query.
 
-9. Get all of the students without a `gmail.com` account and a phone number.
+**Queries 04**: Get all of the students that don't have an email or phone number.
 
-10. Get all of the students currently enrolled.
+- Use the file `queries04.sql` in the `queries` folder to create the query.
 
-    - Get their `name`, `id` and `class_id`.
-    - Order them by `class_id`.
+**Queries 05**: Get all of the students without a `gmail.com` account and a phone number.
 
-11. Get all graduates without a linked Github account.
+- Use the file `queries05.sql` in the `queries` folder to create the query.
 
-    - Get their `name`, `email` and `phone`.
+**Queries 06**: Get all of the students currently enrolled.
 
-12. Write the CREATE TABLE statements for the assignments and a assignment_submissions tables.
+- Use the file `queries06.sql` in the `queries` folder to create the query.
+- Get their `name`, `id` and `class_id`.
+- Order them by `class_id`.
 
-    - Create a file called `02_assignments_assignment_submissions.sql` in the `migrations` folder.
-    - Write the SQL queries to create the tables for the `assignments` and `assignment_submissions` entities. Use the ERD to help.
-    - From your psql session, type `\i migrations/assignments.sql` to execute the file.
-    - Now enter `\dt` into your psql session to make sure the two tables have been created.
+**Queries 07**: Get all graduates without a linked Github account.
 
-13. Import the assignments' and assignment submissions' data from the `seeds` folder into the database.
+- Use the file `queries07.sql` in the `queries` folder to create the query.
+  - Get their `name`, `email` and `phone`.
 
-    - From your psql session, type `\i seeds/assignments_seeds.sql` to execute the file.
-    - Do the same for assignment submissions.
-    - Now enter `SELECT count(*) FROM assignments;` and `SELECT count(*) FROM assignment_submissions;` into your psql session to make sure the students and classes have been imported.
+## Preparing next assignment day:
 
-14. Commit and push your changes to GitHub.
+1. Write the CREATE TABLE statements for the assignments and a assignment_submissions tables.
+
+   - Create a file called `02_assignments_assignment_submissions.sql` in the `migrations` folder.
+   - Write the SQL queries to create the tables for the `assignments` and `assignment_submissions` entities. Use the ERD to help.
+   - From your psql session, type `\i migrations/assignments.sql` to execute the file.
+   - Now enter `\dt` into your psql session to make sure the two tables have been created.
+
+2. Import the assignments' and assignment submissions' data from the `seeds` folder into the database.
+
+   - From your psql session, type `\i seeds/assignments_seeds.sql` to execute the file.
+   - Do the same for assignment submissions.
+   - Now enter `SELECT count(*) FROM assignments;` and `SELECT count(*) FROM assignment_submissions;` into your psql session to make sure the students and classes have been imported.
+
+3. Commit and push your changes to GitHub.
