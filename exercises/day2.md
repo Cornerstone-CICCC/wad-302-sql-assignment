@@ -76,9 +76,12 @@ Use the files inside of the folder `queries_group-by` to do the next queries.
 - Order them by `day`.
 - This query only requires the `assignments` table.
 
-**Queries-group-by 02:** The same query as before, but only return rows where total assignments is greater than or equal to `10`.
+**Queries-group-by 02:** Get the total number of assignments for each day of class (the same query as before), but only return rows where total assignments is greater than or equal to `10`.
 
 - Use the file `queries-group-by02.sql` in the `queries-group-by` folder to create the query.
+- Show only `day`, `total_assignments` columns.
+- Order them by `day`.
+- This query only requires the `assignments` table.
 
 **Queries-group-by 03:** Get all class with 18 or more students.
 
