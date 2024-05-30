@@ -13,7 +13,7 @@
 
 Obs: Execute the same query but replace the `INNER JOIN` with `LEFT JOIN`, `RIGHT JOIN` and `FULL JOIN`. Test all the cases and try to identify what is the difference between them.
 
-**Queries-joins 03:** Create a query to get all rollover students (students that have a start_date different than the class start_date).
+**Queries-joins 03:** Create a query to get all rollover students (A rollover refers to students who start on a different date than the official class start date. So, students that have a start_date different than the class start_date).
 
 - Use the file `queries-joins03.sql` in the `queries-joins` folder to create the query.
 - Show only `student_name`, `class_name`, student's `start_date` and class' `start_date` columns.
@@ -318,7 +318,7 @@ This will return the name of all assignments not completed by 'Ibrahim Schimmel'
 
 **Step 6:** Commit and push your changes.
 
-**Queries-in 01:** Get the total number of assistance requests for a instructor.
+**Queries-in 01:** Get the total number of assistance requests for an instructor.
 
 - Use the file `queries-in01.sql` in the `queries-in` folder to create the query.
 - Select the instructor's name and the total assistance requests.

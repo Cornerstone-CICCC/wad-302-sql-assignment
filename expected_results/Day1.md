@@ -56,7 +56,7 @@ using class_id = 1
 (18 rows)
 ```
 
-## Queries03.sql: Total students first 3 classes
+## Queries03.sql: Get total number of students from the first 3 classes
 
 ```text
   total_students
@@ -65,7 +65,7 @@ using class_id = 1
 (1 row)
 ```
 
-## Queries04.sql: Students without email or phone
+## Queries04.sql: Get all students without email or phone
 
 ```text
    student_name
@@ -90,7 +90,7 @@ using class_id = 1
 (17 rows)
 ```
 
-## Queries05.sql: Students without gmail and phone
+## Queries05.sql: Get all students without gmail AND phone
 
 ```text
       name       | id  |           email           | class_id
@@ -101,7 +101,7 @@ using class_id = 1
 (3 rows)
 ```
 
-## Queries06.sql : Get students enrolled
+## Queries06.sql : Get all of the students currently enrolled
 
 ```text
         name         | id  | class_id
@@ -151,7 +151,7 @@ using class_id = 1
 (42 rows)
 ```
 
-## Queries07.sql: Get graduates without github
+## Queries07.sql: Get all graduates without a linked Github account
 
 ```text
        name        |             email             |    phone
