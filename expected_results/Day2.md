@@ -1,6 +1,6 @@
 # Results
 
-## 01_get_students_with_class_name.sql
+## Queries-joins01.sql: Get students with class name
 
 ```text
        student_name       |               email               | class_name
@@ -26,7 +26,7 @@
 (172 rows)
 ```
 
-## 02_get_enrolled_students_with_class_name.sql
+## Queries-joins02.sql: Get enrolled students with class_name
 
 ```text
     student_name     |               email               | class_name
@@ -56,7 +56,7 @@
 (22 rows)
 ```
 
-## 03_get_rollover_students.sql
+## Queries-joins03.sql: Get rollover students
 
 ```text
    student_name   | class_name | student_start_date | class_start_date
@@ -72,7 +72,7 @@
 (8 rows)
 ```
 
-## 04_get_total_time_assignments_per_student.sql
+## Queries-joins04.sql: Get the total amount of time that a student has spent on all assignments
 
 ```text
    student_name   | total_time
@@ -81,7 +81,7 @@
 (1 row)
 ```
 
-## 05_get_total_time_assignments_per_class.sql
+## Queries-joins05.sql: Get the total amount of time that a student has spent on all assignments per class
 
 ```text
  class_name | total_time
@@ -90,7 +90,7 @@
 (1 row)
 ```
 
-## 06_get_total_submissions_enrolled_students.sql
+## Queries-joins06.sql: Get all classes if it has 18 or more students
 
 ```text
        student       | total_submissions
@@ -140,7 +140,7 @@
 (42 rows)
 ```
 
-## 07_get_total_submissions_enrolled_students_less_100.sql
+## Queries-joins07.sql: Get total submissions from all students WHERE submissions are less than 100
 
 ```text
      student      | total_submissions
@@ -150,7 +150,7 @@
 (2 rows)
 ```
 
-## 01_get_total_assignments_per_day.sql
+## Queries-group-by01.sql: Get total assignments per day
 
 ```text
  day | total_assignments
@@ -179,7 +179,7 @@
 (51 rows)
 ```
 
-## 02_get_total_assignments_per_day_greater_10.sql
+## Queries-group-by02.sql: Get total assignments per day if greater or equal than 10
 
 ```text
  day | total_assignments
@@ -202,7 +202,7 @@
 (15 rows)
 ```
 
-## 03_get_classes_more_18_students.sql
+## Queries-group-by03.sql: Get all classes if it has 18 or more students
 
 ```text
  class_name | total_students
@@ -215,7 +215,7 @@
 (5 rows)
 ```
 
-## 04_get_total_submissions_per_class.sql
+## Queries-group-by04.sql: Get total submissions per class
 
 ```text
  class_name | total_submissions
@@ -234,7 +234,7 @@
 (11 rows)
 ```
 
-## 05_get_enrolled_students_avg_time_completion.sql
+## Queries-group-by05.sql: Get enrolled students avg time completion
 
 ```text
     student_name     |     average_time
@@ -254,7 +254,7 @@
 (42 rows)
 ```
 
-## 06_get_enrolled_students_avg_time_completion_less_estimated.sql
+## Queries-group-by06.sql: Get enrolled students completion time if it is less than average completion tim
 
 ```text
   student_name  |    average_time     | average_estimated_time
@@ -266,7 +266,7 @@
 (4 rows)
 ```
 
-## 01_get_total_assistance_requests_instructor.sql
+## Queries-in01.sql: Get total assistance requests for an instructor
 
 ```text
  total_assistances | instructor_name
@@ -275,7 +275,7 @@
 (1 row)
 ```
 
-## 02_get_total_assistance_per_student.sql
+## Queries-in02.sql: Get total assistance per student
 
 ```text
  total_assistances |   student_name
@@ -284,7 +284,7 @@
 (1 row)
 ```
 
-## 03_get_data_assistance_request.sql
+## Queries-in03.sql: Get important data about each assistance request.
 
 ```text
      instructor     |         student          |        assignment        | assistance_duration
@@ -302,7 +302,7 @@
 (26299 rows)
 ```
 
-## 04_get_avg_assistance_request_duration.sql
+## Queries-in04.sql: Get avg assistance request duration
 
 ```text
  avg_assistance_request_duration
@@ -311,7 +311,7 @@
 (1 row)
 ```
 
-## 05_get_avg_duration_assistance_per_class.sql
+## Queries-in05.sql: Get avg duration assistance per class
 
 ```text
  class | avg_duration_assistance
@@ -330,7 +330,7 @@
 (11 rows)
 ```
 
-## 06_get_class_longest_assistances.sql
+## Queries-in06.sql: Get class longest assistances
 
 ```text
  class | avg_duration_assistance
@@ -339,7 +339,7 @@
 (1 row)
 ```
 
-## 07_get_avg_request_wait_time.sql
+## Queries-in07.sql: Get avg request wait time
 
 ```text
  average_wait_time
@@ -348,7 +348,7 @@
 (1 row)
 ```
 
-## 08_get_total_assistance_requests_class.sql
+## Queries-in08.sql: Get the total duration of all assistance requests for each class
 
 ```text
  class | total_duration
@@ -367,7 +367,7 @@
 (11 rows)
 ```
 
-## 09_get_avg_total_assistance_requests_class.sql
+## Queries-in09.sql: Get the average total duration of assistance requests for each class
 
 ```text
  avg_total_duration
@@ -376,7 +376,7 @@
 (1 row)
 ```
 
-## 10_get_total_assistance_requests_assignment.sql
+## Queries-in10.sql: Get total assistance requests per assignments
 
 ```text
  id  | day | chapter |                name                | total_assistances
@@ -394,7 +394,7 @@
 (424 rows)
 ```
 
-## 11_get_total_assignment_duration_day.sql
+## Queries-in11.sql: Get total assignment duration per day
 
 ```text
  day | number_of_assignments | total_duration
@@ -412,7 +412,7 @@
   (51 rows)
 ```
 
-## 12_get_instructors_assisted_class.sql
+## Queries-in12.sql: Get instructors assisted class
 
 ```text
      instructor     | class
@@ -428,7 +428,7 @@
 (8 rows)
 ```
 
-## 13_get_instructors_assisted_class_with_number.sql
+## Queries-in13.sql: Get instructors assisted class with the total number of assistances performed
 
 ```text
      instructor     | class | total_assistances
