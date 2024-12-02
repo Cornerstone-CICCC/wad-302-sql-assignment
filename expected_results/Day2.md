@@ -239,17 +239,17 @@
 ```text
     student_name     |     average_time
 ---------------------+----------------------
- Hettie Hettinger    | 140.0533333333333333
- Santino Oberbrunner | 139.2991803278688525
- Vance Kihn          | 100.0730994152046784
- Jerrold Rohan       |  99.3553719008264463
- Vivienne Larson     |  96.1818181818181818
- Sean Bartell        |  94.9056047197640118
- Fannie Hammes       |  94.8833333333333333
- Javonte Ward        |  93.9642857142857143
- Bart Leuschke       |  93.7341040462427746
- Bertha Johnson      |  93.4252199413489736
- Ike Lockman         |  92.1510204081632653
+ Hettie Hettinger    | 140.0000000000000000
+ Santino Oberbrunner | 139.2418032786885246
+ Vance Kihn          |  99.9926900584795322
+ Jerrold Rohan       |  99.2768595041322314
+ Vivienne Larson     |  96.0950413223140496
+ Sean Bartell        |  94.8303834808259587
+ Fannie Hammes       |  94.7916666666666667
+ Javonte Ward        |  93.8690476190476190
+ Bart Leuschke       |  93.6560693641618497
+ Bertha Johnson      |  93.3357771260997067
+ Ike Lockman         |  92.0816326530612245
  ...
 (42 rows)
 ```
